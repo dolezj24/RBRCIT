@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
@@ -51,6 +51,10 @@ namespace RBRCIT
             rbrcit.LoadAll();
 
             LoadWindowState();
+
+            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+            if (rbrcit.AutomaticCarlistUpdate)
+                rbrcit.DownloadCarListINI();
 
             col2Sound.IsVisible = rbrcit.UseAudio;
             
@@ -818,7 +822,11 @@ namespace RBRCIT
             }
         }
 
-
+        private void automaticCarListiniUpdateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rbrcit.SetAutomaticCarlistUpdate(!rbrcit.AutomaticCarlistUpdate);
+            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+        }
 
         private void MenuBackup_Click(object sender, EventArgs e)
         {

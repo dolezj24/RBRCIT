@@ -51,6 +51,7 @@
             this.MenuBackup = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuRestore = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.automaticCarListiniUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuUpdateCarList = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.MenuDownloadMissingPhysics = new System.Windows.Forms.ToolStripMenuItem();
@@ -296,6 +297,7 @@
             // downloadToolStripMenuItem
             // 
             this.downloadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.automaticCarListiniUpdateToolStripMenuItem,
             this.MenuUpdateCarList,
             this.toolStripSeparator6,
             this.MenuDownloadMissingPhysics,
@@ -308,6 +310,13 @@
             this.downloadToolStripMenuItem.Name = "downloadToolStripMenuItem";
             this.downloadToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.downloadToolStripMenuItem.Text = "Download";
+            // 
+            // automaticCarListiniUpdateToolStripMenuItem
+            // 
+            this.automaticCarListiniUpdateToolStripMenuItem.Name = "automaticCarListiniUpdateToolStripMenuItem";
+            this.automaticCarListiniUpdateToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.automaticCarListiniUpdateToolStripMenuItem.Text = "Automatic carList.ini update";
+            this.automaticCarListiniUpdateToolStripMenuItem.Click += new System.EventHandler(this.automaticCarListiniUpdateToolStripMenuItem_Click);
             // 
             // MenuUpdateCarList
             // 
@@ -371,8 +380,8 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aboutToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.toolStripMenuItem1.Text = "?";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.toolStripMenuItem1.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
@@ -574,7 +583,7 @@
             this.mySplitContainer1.Panel2.Controls.Add(this.btApply);
             this.mySplitContainer1.Panel2MinSize = 650;
             this.mySplitContainer1.Size = new System.Drawing.Size(1284, 660);
-            this.mySplitContainer1.SplitterDistance = 518;
+            this.mySplitContainer1.SplitterDistance = 502;
             this.mySplitContainer1.SplitterWidth = 8;
             this.mySplitContainer1.TabIndex = 11;
             // 
@@ -632,7 +641,7 @@
             this.olvAllCars.ShowCommandMenuOnRightClick = true;
             this.olvAllCars.ShowFilterMenuOnRightClick = false;
             this.olvAllCars.ShowItemCountOnGroups = true;
-            this.olvAllCars.Size = new System.Drawing.Size(500, 622);
+            this.olvAllCars.Size = new System.Drawing.Size(484, 625);
             this.olvAllCars.SpaceBetweenGroups = 16;
             this.olvAllCars.TabIndex = 0;
             this.olvAllCars.UseCellFormatEvents = true;
@@ -1208,7 +1217,7 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(666, 610);
+            this.button1.Location = new System.Drawing.Point(666, 613);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 37);
             this.button1.TabIndex = 3;
@@ -1219,7 +1228,7 @@
             // btApply
             // 
             this.btApply.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btApply.Location = new System.Drawing.Point(579, 610);
+            this.btApply.Location = new System.Drawing.Point(579, 613);
             this.btApply.Name = "btApply";
             this.btApply.Size = new System.Drawing.Size(80, 37);
             this.btApply.TabIndex = 3;
@@ -1377,6 +1386,7 @@
         private System.Windows.Forms.ToolStripMenuItem downloadMissingSoundBanksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateExistingSoundBanksToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem automaticCarListiniUpdateToolStripMenuItem;
     }
 }
 

@@ -58,7 +58,7 @@ namespace RBRCIT
         public bool UseExternalUnzipper;
         public string PathToExternalUnzipper;
         public string ExternalUnzipperArguments;
-
+        
         private INIFile carlist_ini;
         private INIFile carlistuser_ini;
         private INIFile rbrcit_ini;
@@ -66,8 +66,12 @@ namespace RBRCIT
         private string[] PhysicsFolders;
         private string[] BackupFiles;
 
+        private bool automaticCarlistUpdate;
+
         //we save a reference to the mainform so we can call its update methods when the models (lists) have changed
         private Form1 mainForm;
+
+        public bool AutomaticCarlistUpdate { get => automaticCarlistUpdate; }
 
         public RBRCITModel(Form1 form)
         {
@@ -95,6 +99,8 @@ namespace RBRCIT
                 "Cars/Cars.ini",
                 "Audio/Cars/Cars.ini"
             };
+
+            automaticCarlistUpdate = rbrcit_ini.GetParameterValueBool("automatic_carlist_update", "RBRCIT");
 
             UpdateAudio();
             UpdateFMOD();
@@ -1053,6 +1059,13 @@ namespace RBRCIT
                 File.Move(backupfilename, runningfilename);  //revert back to make sure an exe exists
             }
 
+        }
+
+        public void SetAutomaticCarlistUpdate(bool value)
+        {
+            automaticCarlistUpdate = value;
+            rbrcit_ini.SetParameter("automatic_carlist_update", value.ToString().ToLower(), "RBRCIT");
+            rbrcit_ini.Save();
         }
     }
 }
