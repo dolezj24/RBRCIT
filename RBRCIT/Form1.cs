@@ -52,9 +52,10 @@ namespace RBRCIT
 
             LoadWindowState();
 
-            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+            MenuAutomaticCarListiniUpdate.Checked = rbrcit.AutomaticCarlistUpdate;
             if (rbrcit.AutomaticCarlistUpdate)
                 rbrcit.DownloadCarListINI();
+            downloadToolStripMenuItem.DropDown.Closing += new ToolStripDropDownClosingEventHandler(DropDown_Closing);
 
             col2Sound.IsVisible = rbrcit.UseAudio;
             
@@ -74,6 +75,14 @@ namespace RBRCIT
                     olvAllCars.ListViewItemSorter = new ColumnComparer3(column, order, colManufacturer, SortOrder.Ascending, colName, SortOrder.Ascending);
                 }
             };
+        }
+
+        protected void DropDown_Closing(object sender, ToolStripDropDownClosingEventArgs e)
+        {
+            if (sender == MenuAutomaticCarListiniUpdate && e.CloseReason == ToolStripDropDownCloseReason.ItemClicked)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void InitializeFields()
@@ -825,7 +834,7 @@ namespace RBRCIT
         private void automaticCarListiniUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rbrcit.SetAutomaticCarlistUpdate(!rbrcit.AutomaticCarlistUpdate);
-            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+            MenuAutomaticCarListiniUpdate.Checked = rbrcit.AutomaticCarlistUpdate;
         }
 
         private void MenuBackup_Click(object sender, EventArgs e)

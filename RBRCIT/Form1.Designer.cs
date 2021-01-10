@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            BrightIdeasSoftware.CellStyle cellStyle1 = new BrightIdeasSoftware.CellStyle();
-            BrightIdeasSoftware.CellStyle cellStyle2 = new BrightIdeasSoftware.CellStyle();
-            BrightIdeasSoftware.CellStyle cellStyle3 = new BrightIdeasSoftware.CellStyle();
+            BrightIdeasSoftware.CellStyle cellStyle4 = new BrightIdeasSoftware.CellStyle();
+            BrightIdeasSoftware.CellStyle cellStyle5 = new BrightIdeasSoftware.CellStyle();
+            BrightIdeasSoftware.CellStyle cellStyle6 = new BrightIdeasSoftware.CellStyle();
             this.contextMenuStripGroups = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.collapseAllGroupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.uncollapseAllGroupsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +51,7 @@
             this.MenuBackup = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuRestore = new System.Windows.Forms.ToolStripMenuItem();
             this.downloadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.automaticCarListiniUpdateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuAutomaticCarListiniUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuUpdateCarList = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.MenuDownloadMissingPhysics = new System.Windows.Forms.ToolStripMenuItem();
@@ -297,7 +297,7 @@
             // downloadToolStripMenuItem
             // 
             this.downloadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.automaticCarListiniUpdateToolStripMenuItem,
+            this.MenuAutomaticCarListiniUpdate,
             this.MenuUpdateCarList,
             this.toolStripSeparator6,
             this.MenuDownloadMissingPhysics,
@@ -311,12 +311,12 @@
             this.downloadToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.downloadToolStripMenuItem.Text = "Download";
             // 
-            // automaticCarListiniUpdateToolStripMenuItem
+            // MenuAutomaticCarListiniUpdate
             // 
-            this.automaticCarListiniUpdateToolStripMenuItem.Name = "automaticCarListiniUpdateToolStripMenuItem";
-            this.automaticCarListiniUpdateToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.automaticCarListiniUpdateToolStripMenuItem.Text = "Automatic carList.ini update";
-            this.automaticCarListiniUpdateToolStripMenuItem.Click += new System.EventHandler(this.automaticCarListiniUpdateToolStripMenuItem_Click);
+            this.MenuAutomaticCarListiniUpdate.Name = "MenuAutomaticCarListiniUpdate";
+            this.MenuAutomaticCarListiniUpdate.Size = new System.Drawing.Size(240, 22);
+            this.MenuAutomaticCarListiniUpdate.Text = "Automatic carList.ini update";
+            this.MenuAutomaticCarListiniUpdate.Click += new System.EventHandler(this.automaticCarListiniUpdateToolStripMenuItem_Click);
             // 
             // MenuUpdateCarList
             // 
@@ -398,17 +398,17 @@
             // 
             // hyperlinkStyle1
             // 
-            cellStyle1.Font = null;
-            cellStyle1.FontStyle = System.Drawing.FontStyle.Underline;
-            cellStyle1.ForeColor = System.Drawing.Color.Blue;
-            this.hyperlinkStyle1.Normal = cellStyle1;
-            cellStyle2.Font = null;
-            cellStyle2.FontStyle = System.Drawing.FontStyle.Underline;
-            this.hyperlinkStyle1.Over = cellStyle2;
+            cellStyle4.Font = null;
+            cellStyle4.FontStyle = System.Drawing.FontStyle.Underline;
+            cellStyle4.ForeColor = System.Drawing.Color.Blue;
+            this.hyperlinkStyle1.Normal = cellStyle4;
+            cellStyle5.Font = null;
+            cellStyle5.FontStyle = System.Drawing.FontStyle.Underline;
+            this.hyperlinkStyle1.Over = cellStyle5;
             this.hyperlinkStyle1.OverCursor = System.Windows.Forms.Cursors.Hand;
-            cellStyle3.Font = null;
-            cellStyle3.ForeColor = System.Drawing.Color.Blue;
-            this.hyperlinkStyle1.Visited = cellStyle3;
+            cellStyle6.Font = null;
+            cellStyle6.ForeColor = System.Drawing.Color.Blue;
+            this.hyperlinkStyle1.Visited = cellStyle6;
             // 
             // statusStrip1
             // 
@@ -583,7 +583,7 @@
             this.mySplitContainer1.Panel2.Controls.Add(this.btApply);
             this.mySplitContainer1.Panel2MinSize = 650;
             this.mySplitContainer1.Size = new System.Drawing.Size(1284, 660);
-            this.mySplitContainer1.SplitterDistance = 502;
+            this.mySplitContainer1.SplitterDistance = 498;
             this.mySplitContainer1.SplitterWidth = 8;
             this.mySplitContainer1.TabIndex = 11;
             // 
@@ -641,7 +641,7 @@
             this.olvAllCars.ShowCommandMenuOnRightClick = true;
             this.olvAllCars.ShowFilterMenuOnRightClick = false;
             this.olvAllCars.ShowItemCountOnGroups = true;
-            this.olvAllCars.Size = new System.Drawing.Size(484, 625);
+            this.olvAllCars.Size = new System.Drawing.Size(480, 625);
             this.olvAllCars.SpaceBetweenGroups = 16;
             this.olvAllCars.TabIndex = 0;
             this.olvAllCars.UseCellFormatEvents = true;
@@ -1386,7 +1386,7 @@
         private System.Windows.Forms.ToolStripMenuItem downloadMissingSoundBanksToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateExistingSoundBanksToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripMenuItem automaticCarListiniUpdateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuAutomaticCarListiniUpdate;
     }
 }
 
