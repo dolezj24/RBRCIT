@@ -52,7 +52,7 @@ namespace RBRCIT
 
             LoadWindowState();
 
-            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+            MenuAutomaticCarListiniUpdate.Checked = rbrcit.AutomaticCarlistUpdate;
             if (rbrcit.AutomaticCarlistUpdate)
                 rbrcit.DownloadCarListINI();
 
@@ -825,7 +825,7 @@ namespace RBRCIT
         private void automaticCarListiniUpdateToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rbrcit.SetAutomaticCarlistUpdate(!rbrcit.AutomaticCarlistUpdate);
-            automaticCarListiniUpdateToolStripMenuItem.Checked = rbrcit.AutomaticCarlistUpdate;
+            MenuAutomaticCarListiniUpdate.Checked = rbrcit.AutomaticCarlistUpdate;
         }
 
         private void MenuBackup_Click(object sender, EventArgs e)
