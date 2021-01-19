@@ -57,6 +57,7 @@ namespace RBRCIT
                     client.DownloadProgressChanged += new DownloadProgressChangedEventHandler(client_DownloadProgressChanged);
                     client.DownloadDataCompleted += Client_DownloadDataCompleted;
                     Uri u = new Uri(job.URL);
+                    client.Headers.Add("Referer", "rbrcit");
                     client.DownloadDataAsync(u, client);
                 }
             }
